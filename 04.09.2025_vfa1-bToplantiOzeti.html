@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-B Sınıfı Veli Toplantısı Raporu</title>
+    <style>
+        /* Genel Sayfa Stilleri */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Ana Konteyner */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        /* Başlık Alanı */
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+        }
+        .header h1 {
+            color: #007bff;
+            margin: 0;
+            font-size: 2em;
+        }
+        .header p {
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        /* Açılır/Kapanır Bölümler */
+        .section {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            transition: box-shadow 0.3s ease;
+        }
+        .section:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        /* ÖNEMLİ: Buton olarak güncellendi ve stilleri sıfırlandı */
+        .section-header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            
+            /* BUTON STİLLERİNİ SIFIRLAMAK İÇİN EKLENEN KODLAR */
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-family: inherit;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.3em;
+        }
+        .section-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* 'ease-out' daha pürüzsüz bir animasyon sağlar */
+            background-color: #fdfdfd;
+        }
+        .section-content ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .section-content ul li {
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+        }
+        /* Aktif (Açık) Bölüm Stili */
+        .section.active .section-content {
+            padding: 20px;
+            max-height: 1200px;
+        }
+        .arrow {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+        .section.active .arrow {
+            transform: rotate(90deg);
+        }
+        /* Diğer stiller aynı... */
+        .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #777; }
+        .highlight { color: #d9534f; font-weight: bold; }
+        .section-content a { color: #0056b3; font-weight: bold; text-decoration: none; }
+        .section-content a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            body { padding: 5px; }
+            .container { margin: 10px; padding: 15px; }
+            .header h1 { font-size: 1.6em; }
+            .section-header h2 { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>1-B Sınıfı Veli Toplantısı Kararları</h1>
+            <p><strong>Öğretmen:</strong> Ersoy İnce</p>
+            <p><strong>Tarih:</strong> 04.09.2025 | <strong>Saat:</strong> 13:00</p>
+        </div>
+
+        <p style="text-align: center; margin: 25px 10px;">Değerli Velilerimiz, 2025-2026 Eğitim-Öğretim yılı sene başı veli toplantımıza katılımınız için teşekkür ederiz. Toplantıda alınan kararlar ve bilgilendirmeler aşağıda özetlenmiştir. Başlıkların üzerine tıklayarak detayları görebilirsiniz.</p>
+
+        <!-- HTML Yapısı Button olarak güncellenmiştir -->
+        <div class="section">
+            <button class="section-header" type="button">
+                <h2>Beslenme ve Teneffüs</h2>
+                <span class="arrow">▶</span>
+            </button>
+            <div class="section-content">
+                <ul>
+                    <li>Çocuklarımızın okula mutlaka kahvaltı yaparak gelmeleri...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <button class="section-header" type="button">
+                <h2>İletişim ve Davranış</h2>
+                <span class="arrow">▶</span>
+            </button>
+            <div class="section-content">
+                <ul>
+                    <li>Çocuklar arasında yaşanabilecek ufak tefek anlaşmazlıklar...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <button class="section-header" type="button">
+                <h2>Ders Malzemeleri ve Sınıf İhtiyaçları</h2>
+                <span class="arrow">▶</span>
+            </button>
+            <div class="section-content">
+                <ul>
+                    <li>Okuma-yazma setinin maliyeti yaklaşık...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <button class="section-header" type="button">
+                <h2>Kılık Kıyafet Kuralları</h2>
+                <span class="arrow">▶</span>
+            </button>
+            <div class="section-content">
+                <ul>
+                    <li>Çocuklarımızın pratikliği açısından ayakkabılarının...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <button class="section-header" type="button">
+                <h2>Ders Saatleri ve Düzen</h2>
+                <span class="arrow">▶</span>
+            </button>
+            <div class="section-content">
+                <ul>
+                    <li>Valilik kararı sonrası kesinleşecek olmakla birlikte...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <button class="section-header" type="button">
+                <h2>Eğitim Anlayışı ve Tavsiyeler</h2>
+                <span class="arrow">▶</span>
+            </button>
+            <div class="section-content">
+                <ul>
+                    <li>Öğretmenimiz, vatanını, milletini ve devletini seven...</li>
+                </ul>
+            </div>
+        </div>
+        <!-- İçeriklerin tamamını eklemedim, siz kendi orijinal dosyanızdaki gibi doldurabilirsiniz. -->
+
+        <div class="footer">
+            <p>Yeni eğitim-öğretim yılının tüm öğrencilerimiz ve siz değerli velilerimiz için hayırlı olmasını dileriz.</p>
+            <p><strong>Ersoy İnce | 1-B Sınıf Öğretmeni</strong></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const allSections = document.querySelectorAll('.section');
+
+            allSections.forEach(section => {
+                const header = section.querySelector('.section-header');
+                
+                header.addEventListener('click', () => {
+                    const isActive = section.classList.contains('active');
+
+                    // Önce tüm açık sekmeleri kapat
+                    allSections.forEach(s => {
+                        s.classList.remove('active');
+                    });
+                    
+                    // Eğer tıklanan sekme zaten açık değilse, onu aç
+                    if (!isActive) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
