@@ -61,8 +61,6 @@
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            
-            /* BUTON STİLLERİNİ SIFIRLAMAK İÇİN EKLENEN KODLAR */
             width: 100%;
             border: none;
             text-align: left;
@@ -77,7 +75,7 @@
             padding: 0 20px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* 'ease-out' daha pürüzsüz bir animasyon sağlar */
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
             background-color: #fdfdfd;
         }
         .section-content ul {
@@ -104,11 +102,28 @@
         .section.active .arrow {
             transform: rotate(90deg);
         }
-        /* Diğer stiller aynı... */
-        .footer { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #777; }
-        .highlight { color: #d9534f; font-weight: bold; }
-        .section-content a { color: #0056b3; font-weight: bold; text-decoration: none; }
-        .section-content a:hover { text-decoration: underline; }
+        /* Alt Bilgi */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+        }
+        /* Vurgulama ve Link Stilleri */
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .section-content a {
+            color: #0056b3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .section-content a:hover {
+            text-decoration: underline;
+        }
+        /* Mobil Cihazlar İçin Ekran Boyutu Ayarlamaları */
         @media (max-width: 600px) {
             body { padding: 5px; }
             .container { margin: 10px; padding: 15px; }
@@ -128,7 +143,6 @@
 
         <p style="text-align: center; margin: 25px 10px;">Değerli Velilerimiz, 2025-2026 Eğitim-Öğretim yılı sene başı veli toplantımıza katılımınız için teşekkür ederiz. Toplantıda alınan kararlar ve bilgilendirmeler aşağıda özetlenmiştir. Başlıkların üzerine tıklayarak detayları görebilirsiniz.</p>
 
-        <!-- HTML Yapısı Button olarak güncellenmiştir -->
         <div class="section">
             <button class="section-header" type="button">
                 <h2>Beslenme ve Teneffüs</h2>
@@ -136,10 +150,13 @@
             </button>
             <div class="section-content">
                 <ul>
-                    <li>Çocuklarımızın okula mutlaka kahvaltı yaparak gelmeleri...</li>
+                    <li>Çocuklarımızın okula mutlaka kahvaltı yaparak gelmeleri, gün içindeki enerjileri ve derse odaklanmaları için çok önemlidir.</li>
+                    <li>Üçüncü teneffüs süresi uzun olacağından, çocuklarımızın yanına fındık, ceviz gibi sağlıklı çerezler veya meyve gibi atıştırmalıklar koyabilirsiniz.</li>
+                    <li>Çocuklarımızın sağlıklı uyku düzeni için akşam en geç <span class="highlight">21:00</span> civarında uyumuş olmaları tavsiye edilmektedir.</li>
                 </ul>
             </div>
         </div>
+
         <div class="section">
             <button class="section-header" type="button">
                 <h2>İletişim ve Davranış</h2>
@@ -147,10 +164,13 @@
             </button>
             <div class="section-content">
                 <ul>
-                    <li>Çocuklar arasında yaşanabilecek ufak tefek anlaşmazlıklar...</li>
+                    <li>Çocuklar arasında yaşanabilecek ufak tefek anlaşmazlıklar (kavga, argo kelime kullanımı vb.) normaldir. Bu gibi durumlarda veliler olarak sakin kalmamız ve durumu kendi aramızda sorun haline getirmememiz önemlidir. Unutmayalım ki çocuklar kısa sürede barışacaktır.</li>
+                    <li>Okulda yaşanabilecek küçük kazalar ve yaralanmalar olabilir. Bu durumlarda gerekli müdahaleler okul yönetimi ve öğretmenimiz tarafından yapılacak ve tarafınıza mutlaka bilgi verilecektir. Endişe edilmemelidir.</li>
+                    <li>Öğretmen ve veli olarak her zaman aynı tarafta olduğumuzu ve amacımızın çocuklarımızın iyiliği olduğunu unutmamalıyız.</li>
                 </ul>
             </div>
         </div>
+
         <div class="section">
             <button class="section-header" type="button">
                 <h2>Ders Malzemeleri ve Sınıf İhtiyaçları</h2>
@@ -158,10 +178,15 @@
             </button>
             <div class="section-content">
                 <ul>
-                    <li>Okuma-yazma setinin maliyeti yaklaşık...</li>
+                    <li>Okuma-yazma setinin maliyeti yaklaşık <span class="highlight">500-600 TL</span> civarında olacaktır. Bu setin alımı tavsiye niteliğindedir ve detaylar önümüzdeki hafta netleşecektir.</li>
+                    <li>Sınıfımızın ortak ihtiyaçları (fotokopi kağıdı, temizlik malzemesi vb.) için <span class="highlight">100 TL</span> gibi bir katkı payı toplanması planlanmaktadır. Bu konu da haftaya kesinleşecektir.</li>
+                    <li>Sınıfımız için bir yazıcı alınması gerekmektedir. Uygun fiyatlı modeller araştırılacaktır.</li>
+                    <li><strong>Güzel Yazı Defteri:</strong> Büyük boy, 3 çizgili ve 2 aralıklı modelden 2 adet alınacaktır.</li>
+                    <li><strong>Boya Kalemleri:</strong> Bu yıl ve 3. sınıfa kadar sadece kuru boya ve pastel boya kullanılacaktır. Sulu boya alınmasına gerek yoktur.</li>
                 </ul>
             </div>
         </div>
+        
         <div class="section">
             <button class="section-header" type="button">
                 <h2>Kılık Kıyafet Kuralları</h2>
@@ -169,10 +194,14 @@
             </button>
             <div class="section-content">
                 <ul>
-                    <li>Çocuklarımızın pratikliği açısından ayakkabılarının...</li>
+                    <li>Çocuklarımızın pratikliği açısından ayakkabılarının <span class="highlight">bağcıksız (cırt cırtlı veya lastikli)</span> olması tercih edilmelidir.</li>
+                    <li>Pantolon ve eteklerin <span class="highlight">düğmesiz (beli lastikli)</span> olması, çocuklarımızın tuvalet ihtiyacını tek başlarına daha rahat karşılamalarını sağlayacaktır.</li>
+                    <li>Kıyafetlerde okul logosu bulunması zorunlu değildir. Okul formasıyla aynı renk tonlarında olması yeterlidir.</li>
+                    <li>Karışıklığı önlemek adına hırka, yelek gibi çıkarılabilir giysilerin iç etiketlerine çocuklarımızın isimlerinin yazılması önemle rica olunur.</li>
                 </ul>
             </div>
         </div>
+
         <div class="section">
             <button class="section-header" type="button">
                 <h2>Ders Saatleri ve Düzen</h2>
@@ -180,10 +209,15 @@
             </button>
             <div class="section-content">
                 <ul>
-                    <li>Valilik kararı sonrası kesinleşecek olmakla birlikte...</li>
+                    <li>Valilik kararı sonrası kesinleşecek olmakla birlikte, geçen senenin ders saatleri şu şekildedir:</li>
+                    <li><strong>Ders Başlangıç:</strong> 08:40</li>
+                    <li><strong>Pazartesi Tören:</strong> 08:35'te bahçede hazır olunmalıdır.</li>
+                    <li><strong>Ders Bitiş:</strong> 14:40 (1. sınıflar, karmaşayı önlemek amacıyla diğer kademelerden her zaman 5 dakika erken çıkacaktır.)</li>
+                    <li>Oturma düzeni, her öğrencinin sınıfın her yerini tecrübe etmesi amacıyla her hafta bir sıra arkaya kayacak şekilde planlanmaktadır.</li>
                 </ul>
             </div>
         </div>
+
         <div class="section">
             <button class="section-header" type="button">
                 <h2>Eğitim Anlayışı ve Tavsiyeler</h2>
@@ -191,11 +225,13 @@
             </button>
             <div class="section-content">
                 <ul>
-                    <li>Öğretmenimiz, vatanını, milletini ve devletini seven...</li>
+                    <li>Öğretmenimiz, vatanını, milletini ve devletini seven bireyler yetiştirmenin önemini vurgulamaktadır. Bayrağımızı en yüksekte taşımak hepimizin ortak görevidir.</li>
+                    <li>"Her çocuk bir çiçektir. Önemli olan bu çiçekten en iyi kokuyu alabilmektir." sözüyle her çocuğun özel ve değerli olduğu belirtilmiştir.</li>
+                    <li>Çocuklarımızın farklı yeteneklere sahip olabileceği ve ders başarısının tek bir ölçüt olmadığı unutulmamalıdır.</li>
+                    <li>Evde çalışmaları desteklemek amacıyla <a href="https://www.morpakampus.com/anasayfa" target="_blank">Morpa Kampüs</a> ve <a href="https://www.okulistik.com/anasayfa/index.html" target="_blank">Okulistik</a> gibi online platformlar tavsiye edilmektedir. (İsimlerin üzerine tıklayarak sitelere ulaşabilirsiniz.)</li>
                 </ul>
             </div>
         </div>
-        <!-- İçeriklerin tamamını eklemedim, siz kendi orijinal dosyanızdaki gibi doldurabilirsiniz. -->
 
         <div class="footer">
             <p>Yeni eğitim-öğretim yılının tüm öğrencilerimiz ve siz değerli velilerimiz için hayırlı olmasını dileriz.</p>
@@ -213,15 +249,15 @@
                 header.addEventListener('click', () => {
                     const isActive = section.classList.contains('active');
 
-                    // Önce tüm açık sekmeleri kapat
+                    // Diğer tüm açık bölümleri kapat
                     allSections.forEach(s => {
-                        s.classList.remove('active');
+                        if (s !== section) {
+                            s.classList.remove('active');
+                        }
                     });
                     
-                    // Eğer tıklanan sekme zaten açık değilse, onu aç
-                    if (!isActive) {
-                        section.classList.add('active');
-                    }
+                    // Tıklanan bölümün durumunu değiştir (açıksa kapat, kapalıysa aç)
+                    section.classList.toggle('active');
                 });
             });
         });
